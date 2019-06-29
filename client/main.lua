@@ -959,18 +959,4 @@ end
 function VerifPlaqueVehiculeActuel()
 	plaquevehiculeactuel = GetVehicleNumberPlateText(GetVehiclePedIsIn(GetPlayerPed(-1), false))
 end
-
-Citizen.CreateThread(function()
-	while true do
-		Citizen.Wait(0)
-		while debugit do
-			Citizen.Wait(0)
-			plyCoords = GetEntityCoords(GetPlayerPed(-1), false)
-			ESX.Game.Utils.DrawText3D(plyCoords + vector3(0.0, 0.0, 0.1), "Work Truck ID: "..tostring(work_truck), 0.8)		
-			ESX.Game.Utils.DrawText3D(plyCoords + vector3(0.0, 0.0, 0.0), "Action to check for button press: "..tostring(CollectionAction), 0.8)		
-			ESX.Game.Utils.DrawText3D(plyCoords + vector3(0.0, 0.0, -0.1), "Truck Deposit: "..tostring(truckdeposit), 0.8)		
-			ESX.Game.Utils.DrawText3D(plyCoords + vector3(0.0, 0.0, -0.2), "Bin Collection: "..tostring(trashcollection), 0.8)	
-		end	
-	end
-end)
 								
